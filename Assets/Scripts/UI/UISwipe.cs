@@ -22,12 +22,10 @@ namespace TopDownShooter
 			
 			if (dif.x > 0)
 			{
-				Debug.Log("Left");
 				onRightSwipe.Invoke();
 			}
 			else
 			{
-				Debug.Log("Right");
 				onLeftSwipe.Invoke();
 			}
 		}
