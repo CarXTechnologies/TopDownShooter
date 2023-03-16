@@ -12,3 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 284795e56960e024d957adcbd17aa15f, type: 3}
   m_Name: PlayerProfileSO
   m_EditorClassIdentifier: 
+  m_default:
+    audioOptions:
+      musicVolume: 80
+      fxVolume: 80
+    levelIndex: 0
+    coins: 100

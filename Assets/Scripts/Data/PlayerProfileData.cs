@@ -7,15 +7,15 @@ namespace TopDownShooter
 	public class PlayerProfileData
 	{
 		public AudioOptions audioOptions = new();
-
-		public int levelIndex;
+		public int playerLevel;
+		public int coins;
 	}
 
 
 	[System.Serializable]
 	public class AudioOptions
 	{
-		public float musicVolume;
-		public float fxVolume;
+		public int musicVolume;
+		public int fxVolume;
 	}
 }

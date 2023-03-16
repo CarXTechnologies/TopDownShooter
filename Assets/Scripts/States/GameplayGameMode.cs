@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine.SceneManagement;
 
 namespace TopDownShooter.States
 {
@@ -17,6 +18,12 @@ namespace TopDownShooter.States
 		public void GotoMainMenu()
 		{
 			GameController.LoadScene("MainMenu");
+		}
+
+		public void ReloadLevel()
+		{
+			var scene = SceneManager.GetActiveScene();
+			GameController.LoadScene(scene.name);
 		}
 	}
 }

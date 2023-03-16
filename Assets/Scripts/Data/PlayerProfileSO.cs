@@ -7,12 +7,15 @@ namespace TopDownShooter
 	[CreateAssetMenu(fileName = "PlayerProfileSO", menuName = "PlayerProfileSO")]
 	public class PlayerProfileSO : ScriptableObject
 	{
+		[SerializeField] private PlayerProfileData m_default;
+		
 		public AudioOptions audioOptions { get; private set; } = new AudioOptions();
-
-		public int levelIndex { private set; get; }
+		public int playerLevel { private set; get; }
 		public int coins { private set; get; }
-
 		public event System.Action<int> onCoinsChange;
+		public int lastLevelIndex { set; get; } = 0;
+
+		
 
 		public void SpendCoins(int value)
 		{
@@ -20,9 +23,9 @@ namespace TopDownShooter
 			onCoinsChange?.Invoke(coins);
 		}
 
-		public void LeveUp()
+		public void LevelUp()
 		{
-			levelIndex++;
+			playerLevel++;
 		}
 
 		public void LoadFromJson(string json)
@@ -32,19 +35,32 @@ namespace TopDownShooter
 				var data = JsonUtility.FromJson<PlayerProfileData>(json);
 				if (data != null)
 				{
-					this.levelIndex = data.levelIndex;
-					this.audioOptions = data.audioOptions;
+					Init(data);
 				}
 			}
+		}
+
+		private void Init(PlayerProfileData data)
+		{
+			this.playerLevel = data.playerLevel;
+			this.coins = data.coins;
+			this.audioOptions.fxVolume = data.audioOptions.fxVolume;
+			this.audioOptions.musicVolume = data.audioOptions.musicVolume;
 		}
 
 		public string ToJson()
 		{
 			PlayerProfileData data = new PlayerProfileData();
-			data.levelIndex = this.levelIndex;
+			data.playerLevel = this.playerLevel;
+			data.coins = this.coins;
 			data.audioOptions = this.audioOptions;
 
 			return JsonUtility.ToJson(data);
+		}
+
+		private void OnEnable()
+		{
+			Init(m_default);
 		}
 	}
 }

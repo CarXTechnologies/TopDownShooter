@@ -34,6 +34,15 @@ namespace TopDownShooter
 		{
 			SavePlayerProfile();
 		}
+
+		private void OnApplicationPause(bool pauseStatus)
+		{
+			if (pauseStatus)
+			{
+
+			}
+		}
+
 		private void LoadPlayerProfile()
 		{
 			var json = PlayerPrefs.GetString("PlayerProfile");
@@ -43,7 +52,6 @@ namespace TopDownShooter
 
 		private void SavePlayerProfile()
 		{
-			m_playerProfile.audioOptions.fxVolume = 0.5f;
 			var json = m_playerProfile.ToJson();
 			Debug.Log($">>> save {json}");
 			PlayerPrefs.SetString("PlayerProfile", json);
@@ -62,7 +70,8 @@ namespace TopDownShooter
 			yield return SceneManager.LoadSceneAsync("Empty");
 			
 			System.GC.Collect();
-			
+			Resources.UnloadUnusedAssets();
+
 			yield return SceneManager.LoadSceneAsync(sceneName);
 			
 			m_loader.SetActive(false);

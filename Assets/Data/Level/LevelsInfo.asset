@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eae2bd59b5b6be4f9c767aa4ff913a0, type: 3}
+  m_Name: LevelsInfo
+  m_EditorClassIdentifier: 
+  m_levels:
+  - name: Sample
+    icon: {fileID: 21300000, guid: 29ae96b2ce38aff4f98dd17d1352c7e9, type: 3}
+    sceneName: SampleScene
+  - name: Level_1
+    icon: {fileID: 21300000, guid: f22bf1e6e8f8885489cbff3e809ce4ad, type: 3}
+    sceneName: Level_1
