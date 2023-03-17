@@ -9091,6 +9091,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd77cc592356cdf4f96039d91903f302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &338946479 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4531686299702002870, guid: 9c63dab69beaa544a9b06040b01e5fb8, type: 3}
+  m_PrefabInstance: {fileID: 338946477}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 222cf01de3e94dc1a46a7ee33459f41e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &339018934 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1564342095363935496, guid: e9ca6f9b0cdc942449c69ae5854b5fd6, type: 3}
@@ -31742,6 +31753,21 @@ MonoBehaviour:
   m_virtualCamera: {fileID: 1548120509}
   m_playerHUD: {fileID: 338946478}
   m_character: {fileID: 486616452}
+  onPlayerDead:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 338946479}
+        m_TargetAssemblyTypeName: TopDownShooter.States.GameplayGameMode, Assembly-CSharp
+        m_MethodName: GotoGameOver
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1405555069
 PrefabInstance:
   m_ObjectHideFlags: 0
