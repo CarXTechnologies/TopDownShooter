@@ -15,6 +15,11 @@ namespace TopDownShooter.States
 			InitStates();
 		}
 
+		private void OnDestroy()
+		{
+			m_stateMachine.Release();
+		}
+
 		private void InitStates()
 		{
 			m_stateMachine = new StateMachine(m_states);

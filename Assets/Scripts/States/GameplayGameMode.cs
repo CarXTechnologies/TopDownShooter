@@ -14,6 +14,11 @@ namespace TopDownShooter.States
 		{
 			ChangeState<PauseState>();
 		}
+		
+		public void GotoGameOver()
+		{
+			ChangeState<GameOverState>();
+		}
 
 		public void GotoMainMenu()
 		{

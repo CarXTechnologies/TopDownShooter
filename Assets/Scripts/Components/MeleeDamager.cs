@@ -16,7 +16,10 @@ namespace TopDownShooter
 			transform.DOKill(true);
 			transform.DOLocalRotate(new Vector3(0, -50, 0), 0.2f).SetLoops(2, LoopType.Yoyo).OnComplete(() =>
 			{
-				Debug.Log("Attack");
+				if (target.TryGetComponent(out HealthComponent hp))
+				{
+					hp.TakeDamage(damage);
+				}
 			});
 		}
 	}

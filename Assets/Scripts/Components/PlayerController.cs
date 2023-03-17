@@ -1,10 +1,7 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
-using static UnityEngine.InputSystem.InputAction;
 
 namespace TopDownShooter
 {
@@ -14,6 +11,9 @@ namespace TopDownShooter
 		[SerializeField] private CinemachineVirtualCamera m_virtualCamera;
 		[SerializeField] private UIPlayerHUD m_playerHUD;
 		[SerializeField] private Character m_character;
+		
+		[Header("Events")]
+		[SerializeField] private UnityEvent onPlayerDead;
 		
 		private MovingComponent m_characterMoving;
 		private AttackManager m_attackManager;
@@ -33,7 +33,10 @@ namespace TopDownShooter
 
 		private void Start()
 		{
-			Init(m_character);
+			if (m_character)
+			{
+				Init(m_character);
+			}
 		}
 
 		private void OnEnable()
@@ -54,6 +57,8 @@ namespace TopDownShooter
 			m_attackManager = character.GetComponent<AttackManager>();
 			m_mana = character.GetComponent<ManaComponent>();
 			m_health = character.GetComponent<HealthComponent>();
+			
+			m_health.onDead += onPlayerDead.Invoke;
 		}
 
 		private void RefreshUI()

@@ -4,12 +4,12 @@ namespace TopDownShooter.States
 {
 	public class PauseState : GameStateBehavior
 	{
-		private void OnEnable()
+		protected override void OnEnter()
 		{
 			Time.timeScale = 0f;
 		}
 
-		private void OnDisable()
+		protected override void OnExit()
 		{
 			Time.timeScale = 1f;
 		}

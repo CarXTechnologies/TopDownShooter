@@ -42,5 +42,16 @@ namespace TopDownShooter.States
 				m_currentState = nextState;
 			}
 		}
+
+		public void Release()
+		{
+			if (m_currentState != null)
+			{
+				m_currentState.Exit();
+				m_currentState = null;
+			}
+			
+			m_states.Clear();
+		}
 	}
 }

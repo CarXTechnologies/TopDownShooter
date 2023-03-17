@@ -32,28 +32,31 @@ namespace TopDownShooter
 
 		private void OnApplicationQuit()
 		{
+			Debug.Log($"[GameController] OnApplicationQuit()", this);
 			SavePlayerProfile();
 		}
 
 		private void OnApplicationPause(bool pauseStatus)
 		{
-			if (pauseStatus)
-			{
+			Debug.Log($"[GameController] OnApplicationPause({pauseStatus})", this);
+		}
 
-			}
+		private void OnApplicationFocus(bool hasFocus)
+		{
+			Debug.Log($"[GameController] OnApplicationFocus({hasFocus})", this);
 		}
 
 		private void LoadPlayerProfile()
 		{
 			var json = PlayerPrefs.GetString("PlayerProfile");
-			Debug.Log($">>> load {json}");
+			Debug.Log($"[GameController] LoadPlayerProfile() - {json}", this);
 			m_playerProfile.LoadFromJson(json);
 		}
 
 		private void SavePlayerProfile()
 		{
 			var json = m_playerProfile.ToJson();
-			Debug.Log($">>> save {json}");
+			Debug.Log($"[GameController] SavePlayerProfile() - {json}", this);
 			PlayerPrefs.SetString("PlayerProfile", json);
 		}
 
