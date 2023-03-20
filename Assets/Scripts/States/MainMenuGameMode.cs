@@ -16,6 +16,11 @@ namespace TopDownShooter.States
 		{
 			ChangeState<CharacterUpgradeState>();
 		}
+		
+		public void GotoStore()
+		{
+			ChangeState<StoreState>();
+		}
 
 		public void LoadLevel()
 		{
