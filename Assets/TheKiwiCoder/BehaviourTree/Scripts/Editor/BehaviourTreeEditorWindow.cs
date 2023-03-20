@@ -15,8 +15,15 @@ namespace TheKiwiCoder
 		{
 			static AssetDeleteResult OnWillDeleteAsset(string path, RemoveAssetOptions opt)
 			{
-				BehaviourTreeEditorWindow wnd = GetWindow<BehaviourTreeEditorWindow>();
-				wnd.ClearIfSelected(path);
+				var asset = AssetDatabase.LoadAssetAtPath<BehaviourTree>(path);
+				if (asset)
+				{
+					if (HasOpenInstances<BehaviourTreeEditorWindow>())
+					{
+						BehaviourTreeEditorWindow wnd = GetWindow<BehaviourTreeEditorWindow>();
+						wnd.ClearIfSelected(path);
+					}
+				}
 				return AssetDeleteResult.DidNotDelete;
 			}
 		}
