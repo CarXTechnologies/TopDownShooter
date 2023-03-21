@@ -15,7 +15,11 @@ namespace TopDownShooter
 		public event System.Action<int> onCoinsChange;
 		public int lastLevelIndex { set; get; } = 0;
 
-		
+		public void AddCoins(int value)
+		{
+			coins = Mathf.Max(0, coins + value);
+			onCoinsChange?.Invoke(coins);
+		}
 
 		public void SpendCoins(int value)
 		{

@@ -10,6 +10,9 @@ namespace TopDownShooter
 
 		[SerializeField] private PlayerProfileSO m_playerProfile;
 		[SerializeField] private GameObject m_loader;
+		[SerializeField] private StoreManager m_store;
+		public StoreManager store => m_store;
+		public PlayerProfileSO playerProfile => m_playerProfile;
 
 		private void Awake()
 		{
