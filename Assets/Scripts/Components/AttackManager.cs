@@ -46,7 +46,8 @@ namespace TopDownShooter
 			foreach (SkillData skillData in skillsData)
 			{
 				var skill = Instantiate(skillData.prefab, m_skillsSlot, false);
-				skill.Init(skillData.mana, skillData.cooldownTime, skillData.attackDistance, skillData.damage + baseDamage, skillData.flightSpeed, skillData.flightDistance);
+				var stats = skillData.stats;
+				skill.Init(stats.mana, stats.cooldownTime, stats.attackDistance, stats.damage + baseDamage, stats.flightSpeed, stats.flightDistance);
 				skill.SetActive(false);
 				m_skills.Add(skill);
 			}

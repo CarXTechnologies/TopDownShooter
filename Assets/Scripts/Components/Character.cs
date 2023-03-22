@@ -12,24 +12,26 @@ namespace TopDownShooter
 
 		private void Start()
 		{
+			var stats = m_data.stats;
+			
 			if (TryGetComponent(out health))
 			{
-				health.Init(m_data.health);
+				health.Init(stats.health);
 			}
 
 			if (TryGetComponent(out mana))
 			{
-				mana.Init(m_data.mana, m_data.speedRestoreMana);
+				mana.Init(stats.mana, stats.speedRestoreMana);
 			}
 
 			if (TryGetComponent(out moving))
 			{
-				moving.Init(m_data.speedMove);
+				moving.Init(stats.speedMove);
 			}
 
 			if (TryGetComponent(out attackManager))
 			{
-				attackManager.Init(m_data.skills, m_data.baseDamage);
+				attackManager.Init(m_data.skills, stats.baseDamage);
 			}
 		}
 	}
