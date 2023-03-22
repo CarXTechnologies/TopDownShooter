@@ -12,5 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24c4066d21944717b19f19b80f692c9e, type: 3}
   m_Name: UpgradeData
   m_EditorClassIdentifier: 
-  player: []
-  skill: []
+  player:
+  - cost: 100
+    stats:
+      health: 100
+      mana: 100
+      speedRestoreMana: 10
+      speedMove: 100
+      baseDamage: 50
+  skill1: []
+  skill2: []
