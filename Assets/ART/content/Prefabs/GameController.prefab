@@ -389,7 +389,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3419f8302d68741b5eba87ec005fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storeData: {fileID: 11400000, guid: 86f8ceec51167d5459f0c44f5f7396b5, type: 2}
+  m_UseAppleStoreKitTestCertificate: 0
+  m_storeCatalog: {fileID: 11400000, guid: 86f8ceec51167d5459f0c44f5f7396b5, type: 2}
 --- !u!1001 &7001085419475602649
 PrefabInstance:
   m_ObjectHideFlags: 0

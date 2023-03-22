@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2718983aa3a943845bc2134d361553d9, type: 3}
-  m_Name: StoreData
+  m_Name: StoreCatalog
   m_EditorClassIdentifier: 
   products:
-  - id: coins
-    androidId: androidId
-    iosId: iosId
+  - id: coins_1000
+    GooglePlay: 
+    AppleAppStore: 
     productType: 0
+    payouts: []

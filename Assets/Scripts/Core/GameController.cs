@@ -1,5 +1,11 @@
+using System;
 using System.Collections;
+using System.Threading.Tasks;
+using Unity.Services.Analytics;
+using Unity.Services.Core;
+using Unity.Services.Core.Environments;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
 
 namespace TopDownShooter
@@ -13,6 +19,9 @@ namespace TopDownShooter
 		[SerializeField] private StoreManager m_store;
 		public StoreManager store => m_store;
 		public PlayerProfileSO playerProfile => m_playerProfile;
+
+		private bool m_isInitialized;
+		public static bool isInitialized => instance && instance.m_isInitialized;
 
 		private void Awake()
 		{
@@ -28,9 +37,33 @@ namespace TopDownShooter
 			m_loader.SetActive(false);
 		}
 
-		private void Start()
+		private async void Start()
 		{
 			LoadPlayerProfile();
+
+			await Initialize();
+		}
+
+		private async Task Initialize()
+		{
+			const string kEnvironment = "production";
+			try
+			{
+				var options = new InitializationOptions().SetEnvironmentName(kEnvironment);
+				await UnityServices.InitializeAsync(options);
+				Debug.Log($"UnityServices.Initialize state: {UnityServices.State} - ExternalUserId: {UnityServices.ExternalUserId}");
+				
+				await AnalyticsService.Instance.CheckForRequiredConsents();
+				Debug.Log($"Started AnalyticsUserID: {AnalyticsService.Instance.GetAnalyticsUserID()}");
+			}
+			catch (System.Exception e)
+			{
+				Debug.LogException(e);
+			}
+			
+			store.InitializePurchasing();
+			
+			m_isInitialized = true;
 		}
 
 		private void OnApplicationQuit()
@@ -69,7 +102,7 @@ namespace TopDownShooter
 			instance.StartCoroutine(instance.LoadSceneAsync(sceneName));
 		}
 
-		private IEnumerator LoadSceneAsync(string sceneName)
+		public IEnumerator LoadSceneAsync(string sceneName)
 		{
 			m_loader.SetActive(true);
 			

@@ -5,16 +5,17 @@ using UnityEngine.Purchasing;
 
 namespace TopDownShooter
 {
-	[CreateAssetMenu(fileName = "StoreData", menuName = "StoreData")]
-	public class StoreData : ScriptableObject
+	[CreateAssetMenu(fileName = "StoreCatalog", menuName = "StoreCatalog")]
+	public class StoreCatalog : ScriptableObject
 	{
 		[System.Serializable]
 		public class Product
 		{
 			public string id;
-			public string androidId;
-			public string iosId;
+			public string GooglePlay;
+			public string AppleAppStore;
 			public ProductType productType = ProductType.Consumable;
+			public PayoutDefinition[] payouts;
 
 			public string GetStoreId()
 			{
@@ -28,6 +29,7 @@ namespace TopDownShooter
 		}
 
 		public List<Product> products;
+
 
 		public Product GetProduct(string id)
 		{

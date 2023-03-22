@@ -1,6 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine.Purchasing;
 
 namespace TopDownShooter.States
 {
@@ -9,13 +7,13 @@ namespace TopDownShooter.States
 		public void TryBuyCoins()
 		{
 			var store = GameController.instance.store;
-			store.InitiatePurchase("coins", OnBuyCoins, null);
+			store.InitiatePurchase("coins_1000", OnBuyCoins, null);
 		}
 
 		private void OnBuyCoins()
 		{
 			var profile = GameController.instance.playerProfile;
-			profile.AddCoins(100);
+			profile.AddCoins(1000);
 		}
 	}
 }
