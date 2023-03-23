@@ -11,6 +11,9 @@ namespace TopDownShooter
 		
 		public AudioOptions audioOptions { get; private set; } = new AudioOptions();
 		public int playerLevel { private set; get; }
+		private int[] m_skillsLevel = new int[2];
+		public IReadOnlyList<int> skillsLevel => m_skillsLevel;
+		
 		public int coins { private set; get; }
 		public event System.Action<int> onCoinsChange;
 		public int lastLevelIndex { set; get; } = 0;
@@ -46,24 +49,31 @@ namespace TopDownShooter
 
 		private void Init(PlayerProfileData data)
 		{
-			this.playerLevel = data.playerLevel;
-			this.coins = data.coins;
-			this.audioOptions.fxVolume = data.audioOptions.fxVolume;
-			this.audioOptions.musicVolume = data.audioOptions.musicVolume;
+			playerLevel = data.playerLevel;
+			coins = data.coins;
+			audioOptions.fxVolume = data.audioOptions.fxVolume;
+			audioOptions.musicVolume = data.audioOptions.musicVolume;
+			int i_max = Mathf.Min(data.skillsLevel.Length, m_skillsLevel.Length);
+			for (int i = 0; i < i_max; i++)
+			{
+				m_skillsLevel[i] = data.skillsLevel[i];
+			}
 		}
 
 		public string ToJson()
 		{
 			PlayerProfileData data = new PlayerProfileData();
-			data.playerLevel = this.playerLevel;
-			data.coins = this.coins;
-			data.audioOptions = this.audioOptions;
+			data.playerLevel = playerLevel;
+			data.skillsLevel = m_skillsLevel;
+			data.coins = coins;
+			data.audioOptions = audioOptions;
 
 			return JsonUtility.ToJson(data);
 		}
 
 		private void OnEnable()
 		{
+			m_skillsLevel = new int[2];
 			Init(m_default);
 		}
 	}

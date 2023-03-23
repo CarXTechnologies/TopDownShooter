@@ -19501,6 +19501,8 @@ MonoBehaviour:
   m_virtualCamera: {fileID: 1548120509}
   m_playerHUD: {fileID: 265308567927806799}
   m_character: {fileID: 1873329454}
+  m_playerProfile: {fileID: 11400000, guid: 2f7083add3549cd4cbc249d2b893fbf1, type: 2}
+  m_upgradeData: {fileID: 11400000, guid: ee8344bbbe63e094289e5743ca2ac148, type: 2}
   onPlayerDead:
     m_PersistentCalls:
       m_Calls:

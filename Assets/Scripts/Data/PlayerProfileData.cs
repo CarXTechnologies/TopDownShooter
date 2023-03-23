@@ -8,6 +8,7 @@ namespace TopDownShooter
 	{
 		public AudioOptions audioOptions = new();
 		public int playerLevel;
+		public int[] skillsLevel = new int[2];
 		public int coins;
 	}
 

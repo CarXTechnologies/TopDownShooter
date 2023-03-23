@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: EnemySkilMeleelData
   m_EditorClassIdentifier: 
   prefab: {fileID: -5111387480850904775, guid: 4cda85816f134e845bba6388fc311ca1, type: 3}
-  mana: 10
-  attackDistance: 2
-  cooldownTime: 1
-  damage: 10
-  flightDistance: 20
-  flightSpeed: 15
+  stats:
+    mana: 0
+    attackDistance: 2
+    cooldownTime: 1
+    damage: 10
+    flightDistance: 0
+    flightSpeed: 0

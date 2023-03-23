@@ -11,6 +11,8 @@ namespace TopDownShooter
 		[SerializeField] private CinemachineVirtualCamera m_virtualCamera;
 		[SerializeField] private UIPlayerHUD m_playerHUD;
 		[SerializeField] private Character m_character;
+		[SerializeField] private PlayerProfileSO m_playerProfile;
+		[SerializeField] private UpgradeData m_upgradeData;
 		
 		[Header("Events")]
 		[SerializeField] private UnityEvent onPlayerDead;
@@ -52,6 +54,8 @@ namespace TopDownShooter
 		public void Init(Character character)
 		{
 			m_character = character;
+			m_character.Init(m_upgradeData.GetCharacterData(m_playerProfile.playerLevel, m_playerProfile.skillsLevel));
+			
 			m_characterMoving = character.GetComponent<MovingComponent>();
 			m_virtualCamera.Follow = character.transform;
 			m_attackManager = character.GetComponent<AttackManager>();

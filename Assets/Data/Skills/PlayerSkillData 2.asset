@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: PlayerSkillData 2
   m_EditorClassIdentifier: 
   prefab: {fileID: 4960583622976006278, guid: 80f20968219f8fb46bf3cd6b81868d7b, type: 3}
-  mana: 10
-  attackDistance: 10
-  cooldownTime: 0.1
-  damage: 10
-  flightDistance: 20
-  flightSpeed: 15
+  stats:
+    mana: 10
+    attackDistance: 10
+    cooldownTime: 0.1
+    damage: 10
+    flightDistance: 20
+    flightSpeed: 15

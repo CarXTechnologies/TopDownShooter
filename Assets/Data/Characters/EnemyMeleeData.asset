@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a410dea646b6b914d8058cc9368ffdad, type: 3}
   m_Name: EnemyMeleeData
   m_EditorClassIdentifier: 
-  health: 100
-  mana: 50
-  speedRestoreMana: 10
-  speedMove: 3
-  baseDamage: 30
+  stats:
+    health: 100
+    mana: 50
+    speedRestoreMana: 10
+    speedMove: 3
+    baseDamage: 0
   skills:
   - {fileID: 11400000, guid: 7d3874d76764b9f418ae45b2b457d845, type: 2}

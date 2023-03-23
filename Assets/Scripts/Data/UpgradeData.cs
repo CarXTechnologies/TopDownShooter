@@ -7,21 +7,46 @@ namespace TopDownShooter
 	public class UpgradeData : ScriptableObject
 	{
 		[System.Serializable]
-		public class PlayerUpgradeData
+		public class Upgrade<TStats>
 		{
 			public int cost;
-			public CharacterData.Stats stats;
+			public TStats stats;
 		}
 
 		[System.Serializable]
-		public class SkillUpgradeData
+		public class SkillUpgrade
 		{
-			public int cost;
-			public SkillData.Stats stats;
+			public string name;
+			public SkillData skill;
+			public List<Upgrade<SkillData.Stats>> levels = new();
 		}
-		
-		[SerializeField] private List<PlayerUpgradeData> player = new();
-		[SerializeField] private List<SkillUpgradeData> skill1 = new();
-		[SerializeField] private List<SkillUpgradeData> skill2 = new();
+
+		[SerializeField] private CharacterData m_characterData;
+		[SerializeField] private List<Upgrade<CharacterData.Stats>> m_player = new();
+		[SerializeField] private List<SkillUpgrade> m_skills = new();
+
+		public int playerMaxLevel => m_player.Count;
+
+		public int GetSkillMaxLevel(int index)
+		{
+			return m_skills[index].levels.Count;
+		}
+
+		public CharacterData GetCharacterData(int level, IReadOnlyList<int> skillsLevel)
+		{
+			var playerData = ScriptableObject.Instantiate(m_characterData);
+			var upgradeData = m_player[level];
+			playerData.stats = upgradeData.stats;
+			
+			for (int i = 0; i < skillsLevel.Count; ++i)
+			{
+				var skillLevel = skillsLevel[i];
+				var skillData = Instantiate(playerData.skills[i]);
+				skillData.stats = m_skills[i].levels[skillLevel].stats;
+				playerData.skills[i] = skillData;
+			}
+			
+			return playerData;
+		}
 	}
 }

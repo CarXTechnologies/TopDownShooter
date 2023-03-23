@@ -12,6 +12,13 @@ namespace TopDownShooter
 
 		private void Start()
 		{
+			Init(m_data);
+		}
+
+		public void Init(CharacterData data)
+		{
+			m_data = data;
+			
 			var stats = m_data.stats;
 			
 			if (TryGetComponent(out health))
