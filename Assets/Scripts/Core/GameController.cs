@@ -17,7 +17,9 @@ namespace TopDownShooter
 		[SerializeField] private PlayerProfileSO m_playerProfile;
 		[SerializeField] private GameObject m_loader;
 		[SerializeField] private StoreManager m_store;
+		[SerializeField] private AdsManager m_ads;
 		public StoreManager store => m_store;
+		public AdsManager ads => m_ads;
 		public PlayerProfileSO playerProfile => m_playerProfile;
 
 		private bool m_isInitialized;
@@ -55,6 +57,8 @@ namespace TopDownShooter
 				
 				await AnalyticsService.Instance.CheckForRequiredConsents();
 				Debug.Log($"Started AnalyticsUserID: {AnalyticsService.Instance.GetAnalyticsUserID()}");
+
+				m_ads.Initialize();
 			}
 			catch (System.Exception e)
 			{

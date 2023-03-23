@@ -10,6 +10,18 @@ namespace TopDownShooter.States
 			store.InitiatePurchase("coins_1000", OnBuyCoins, null);
 		}
 
+		public void TryShowAds()
+		{
+			var ads = GameController.instance.ads;
+			ads.ShowRewardedAd(OnAdComplete);
+		}
+
+		private void OnAdComplete()
+		{
+			var profile = GameController.instance.playerProfile;
+			profile.AddCoins(100);
+		}
+
 		private void OnBuyCoins()
 		{
 			var profile = GameController.instance.playerProfile;

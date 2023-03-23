@@ -17,4 +17,8 @@ MonoBehaviour:
     GooglePlay: 
     AppleAppStore: 
     productType: 0
-    payouts: []
+    payouts:
+    - m_Type: 0
+      m_Subtype: 
+      m_Quantity: 0
+      m_Data: 

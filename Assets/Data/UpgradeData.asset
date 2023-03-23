@@ -23,18 +23,18 @@ MonoBehaviour:
       baseDamage: 50
   - cost: 500
     stats:
-      health: 100
-      mana: 50
+      health: 110
+      mana: 60
       speedRestoreMana: 10
-      speedMove: 5
-      baseDamage: 50
+      speedMove: 5.2
+      baseDamage: 55
   - cost: 1000
     stats:
-      health: 100
-      mana: 50
+      health: 110
+      mana: 60
       speedRestoreMana: 10
-      speedMove: 5
-      baseDamage: 50
+      speedMove: 5.2
+      baseDamage: 55
   m_skills:
   - name: Green
     skill: {fileID: 11400000, guid: ffb6c56ec0d5edc4092a669327b3cbc4, type: 2}
