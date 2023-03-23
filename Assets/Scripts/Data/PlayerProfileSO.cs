@@ -18,21 +18,45 @@ namespace TopDownShooter
 		public event System.Action<int> onCoinsChange;
 		public int lastLevelIndex { set; get; } = 0;
 
+		public int GetSkillLevel(int index)
+		{
+			if (index >= 0 && index < m_skillsLevel.Length)
+			{
+				return m_skillsLevel[index];
+			}
+
+			return -1;
+		}
+
 		public void AddCoins(int value)
 		{
 			coins = Mathf.Max(0, coins + value);
 			onCoinsChange?.Invoke(coins);
 		}
 
-		public void SpendCoins(int value)
+		public bool TrySpendCoins(int value)
 		{
-			coins = Mathf.Max(0, coins - value);
-			onCoinsChange?.Invoke(coins);
+			if (value > 0 && coins >= value)
+			{
+				coins = Mathf.Max(0, coins - value);
+				onCoinsChange?.Invoke(coins);
+				return true;
+			}
+
+			return false;
 		}
 
 		public void LevelUp()
 		{
 			playerLevel++;
+		}
+		
+		public void LevelUpSkill(int index)
+		{
+			if (index >= 0 && index < m_skillsLevel.Length)
+			{
+				m_skillsLevel[index]++;
+			}
 		}
 
 		public void LoadFromJson(string json)

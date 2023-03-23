@@ -21,6 +21,20 @@ MonoBehaviour:
       speedRestoreMana: 10
       speedMove: 5
       baseDamage: 50
+  - cost: 500
+    stats:
+      health: 100
+      mana: 50
+      speedRestoreMana: 10
+      speedMove: 5
+      baseDamage: 50
+  - cost: 1000
+    stats:
+      health: 100
+      mana: 50
+      speedRestoreMana: 10
+      speedMove: 5
+      baseDamage: 50
   m_skills:
   - name: Green
     skill: {fileID: 11400000, guid: ffb6c56ec0d5edc4092a669327b3cbc4, type: 2}
@@ -33,10 +47,58 @@ MonoBehaviour:
         damage: 10
         flightDistance: 20
         flightSpeed: 10
+    - cost: 100
+      stats:
+        mana: 10
+        attackDistance: 10
+        cooldownTime: 0.5
+        damage: 10
+        flightDistance: 20
+        flightSpeed: 10
+    - cost: 200
+      stats:
+        mana: 10
+        attackDistance: 10
+        cooldownTime: 0.5
+        damage: 10
+        flightDistance: 20
+        flightSpeed: 10
+    - cost: 300
+      stats:
+        mana: 10
+        attackDistance: 10
+        cooldownTime: 0.5
+        damage: 10
+        flightDistance: 20
+        flightSpeed: 10
   - name: Blue
     skill: {fileID: 11400000, guid: 0aaabeab72b71f34598e95be650495b7, type: 2}
     levels:
     - cost: 0
+      stats:
+        mana: 20
+        attackDistance: 10
+        cooldownTime: 0.1
+        damage: 10
+        flightDistance: 20
+        flightSpeed: 15
+    - cost: 200
+      stats:
+        mana: 20
+        attackDistance: 10
+        cooldownTime: 0.1
+        damage: 10
+        flightDistance: 20
+        flightSpeed: 15
+    - cost: 300
+      stats:
+        mana: 20
+        attackDistance: 10
+        cooldownTime: 0.1
+        damage: 10
+        flightDistance: 20
+        flightSpeed: 15
+    - cost: 400
       stats:
         mana: 20
         attackDistance: 10

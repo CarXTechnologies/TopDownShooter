@@ -31,6 +31,21 @@ namespace TopDownShooter
 		{
 			return m_skills[index].levels.Count;
 		}
+		
+		public SkillUpgrade GetSkillUpgrade(int index)
+		{
+			return m_skills[index];
+		}
+
+		public Upgrade<CharacterData.Stats> GetPlayerUpgrade(int level)
+		{
+			return m_player[level];
+		}
+		
+		public Upgrade<SkillData.Stats> GetSkillUpgradeStats(int index, int level)
+		{
+			return m_skills[index].levels[level];
+		}
 
 		public CharacterData GetCharacterData(int level, IReadOnlyList<int> skillsLevel)
 		{

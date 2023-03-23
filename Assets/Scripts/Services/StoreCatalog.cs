@@ -16,16 +16,6 @@ namespace TopDownShooter
 			public string AppleAppStore;
 			public ProductType productType = ProductType.Consumable;
 			public PayoutDefinition[] payouts;
-
-			public string GetStoreId()
-			{
-#if UNITY_ANDROID
-				return androidId;
-#elif UNITY_IOS
-				return iosId;
-#endif
-				return id;
-			}
 		}
 
 		public List<Product> products;

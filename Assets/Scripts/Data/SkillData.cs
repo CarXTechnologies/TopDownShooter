@@ -21,6 +21,7 @@ namespace TopDownShooter
 		}
 
 		public AttackComponent prefab;
+		public Sprite icon;
 		public Stats stats;
 	}
 }

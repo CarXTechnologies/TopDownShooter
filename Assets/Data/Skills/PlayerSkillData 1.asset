@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: PlayerSkillData 1
   m_EditorClassIdentifier: 
   prefab: {fileID: 4960583622976006278, guid: a14134cb8b9a7624f85acb3a642bd782, type: 3}
+  icon: {fileID: 21300000, guid: ea2a602cc0f6d25409a768431426b840, type: 3}
   stats:
     mana: 10
     attackDistance: 10
