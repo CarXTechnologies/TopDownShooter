@@ -10,6 +10,11 @@ namespace TopDownShooter
 		private DialogData m_dialogData;
 		private int m_index;
 
+		private void Start()
+		{
+			gameObject.SetActive(m_dialogData != null);
+		}
+
 		public void ShowDialog(DialogData dialogData)
 		{
 			m_dialogData = dialogData;
