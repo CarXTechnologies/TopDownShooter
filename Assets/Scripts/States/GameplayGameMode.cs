@@ -19,6 +19,11 @@ namespace TopDownShooter.States
 		{
 			ChangeState<GameOverState>();
 		}
+		
+		public void GotoLevelComplete()
+		{
+			ChangeState<LevelFinishedState>();
+		}
 
 		public void GotoMainMenu()
 		{

@@ -1,12 +1,13 @@
 using System.Collections;
+using System.Collections.Generic;
+using TopDownShooter.States;
 using UnityEngine;
 
-namespace TopDownShooter.States
+namespace TopDownShooter
 {
-	public class GameOverState : GameStateBehavior
+	public class LevelFinishedState : GameStateBehavior
 	{
 		[SerializeField] private GameplayGameMode m_gameMode;
-
 		protected override void OnEnter()
 		{
 			StartCoroutine(ExitToMainMenu());
@@ -15,7 +16,7 @@ namespace TopDownShooter.States
 		private IEnumerator ExitToMainMenu()
 		{
 			yield return new WaitForSecondsRealtime(3f);
-
+			
 			m_gameMode.GotoMainMenu();
 		}
 	}
