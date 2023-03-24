@@ -20,21 +20,35 @@ MonoBehaviour:
       mana: 50
       speedRestoreMana: 10
       speedMove: 5
-      baseDamage: 50
+      baseDamage: 30
   - cost: 500
     stats:
-      health: 110
+      health: 120
       mana: 60
       speedRestoreMana: 10
       speedMove: 5.2
-      baseDamage: 55
+      baseDamage: 40
   - cost: 1000
     stats:
-      health: 110
-      mana: 60
+      health: 140
+      mana: 70
       speedRestoreMana: 10
       speedMove: 5.2
-      baseDamage: 55
+      baseDamage: 50
+  - cost: 1500
+    stats:
+      health: 160
+      mana: 80
+      speedRestoreMana: 10
+      speedMove: 5.2
+      baseDamage: 60
+  - cost: 2000
+    stats:
+      health: 180
+      mana: 100
+      speedRestoreMana: 10
+      speedMove: 5.2
+      baseDamage: 70
   m_skills:
   - name: Green
     skill: {fileID: 11400000, guid: ffb6c56ec0d5edc4092a669327b3cbc4, type: 2}
@@ -50,7 +64,7 @@ MonoBehaviour:
     - cost: 100
       stats:
         mana: 10
-        attackDistance: 10
+        attackDistance: 20
         cooldownTime: 0.5
         damage: 10
         flightDistance: 20
@@ -58,7 +72,7 @@ MonoBehaviour:
     - cost: 200
       stats:
         mana: 10
-        attackDistance: 10
+        attackDistance: 30
         cooldownTime: 0.5
         damage: 10
         flightDistance: 20
@@ -66,7 +80,7 @@ MonoBehaviour:
     - cost: 300
       stats:
         mana: 10
-        attackDistance: 10
+        attackDistance: 40
         cooldownTime: 0.5
         damage: 10
         flightDistance: 20
@@ -87,7 +101,7 @@ MonoBehaviour:
         mana: 20
         attackDistance: 10
         cooldownTime: 0.1
-        damage: 10
+        damage: 20
         flightDistance: 20
         flightSpeed: 15
     - cost: 300
@@ -95,7 +109,7 @@ MonoBehaviour:
         mana: 20
         attackDistance: 10
         cooldownTime: 0.1
-        damage: 10
+        damage: 30
         flightDistance: 20
         flightSpeed: 15
     - cost: 400
@@ -103,6 +117,14 @@ MonoBehaviour:
         mana: 20
         attackDistance: 10
         cooldownTime: 0.1
-        damage: 10
+        damage: 40
+        flightDistance: 20
+        flightSpeed: 15
+    - cost: 400
+      stats:
+        mana: 20
+        attackDistance: 10
+        cooldownTime: 0.1
+        damage: 50
         flightDistance: 20
         flightSpeed: 15
