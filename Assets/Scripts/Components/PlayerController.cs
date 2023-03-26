@@ -40,17 +40,6 @@ namespace TopDownShooter
 				Init(m_character);
 			}
 		}
-
-		private void OnEnable()
-		{
-			m_inputAsset.FindActionMap("Player").Enable();
-		}
-
-		private void OnDisable()
-		{
-			m_inputAsset.FindActionMap("Player").Disable();
-		}
-
 		public void Init(Character character)
 		{
 			m_character = character;

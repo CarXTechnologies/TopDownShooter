@@ -863,6 +863,7 @@ MonoBehaviour:
   m_views:
   - {fileID: 8955604825438908119}
   - {fileID: 749582826821212424}
+  m_inputAsset: {fileID: -944628639613478452, guid: 10ae88c183b9dd3429e615a03799d6fe, type: 3}
 --- !u!1 &4531686298191220934
 GameObject:
   m_ObjectHideFlags: 0

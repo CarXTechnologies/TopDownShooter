@@ -4167,7 +4167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5533888038741951124, guid: 0f32ea55c4019fc48883ac35531f7444, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5533888038741951124, guid: 0f32ea55c4019fc48883ac35531f7444, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9035,33 +9035,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 731371953679327285, guid: 9c63dab69beaa544a9b06040b01e5fb8, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3421373643105367463, guid: 9c63dab69beaa544a9b06040b01e5fb8, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3421373643105367463, guid: 9c63dab69beaa544a9b06040b01e5fb8, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3421373643105367463, guid: 9c63dab69beaa544a9b06040b01e5fb8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3421373643105367463, guid: 9c63dab69beaa544a9b06040b01e5fb8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4531686299702002865, guid: 9c63dab69beaa544a9b06040b01e5fb8, type: 3}
       propertyPath: m_Name
       value: GameplayGameMode
       objectReference: {fileID: 0}
     - target: {fileID: 4531686299702002871, guid: 9c63dab69beaa544a9b06040b01e5fb8, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4531686299702002871, guid: 9c63dab69beaa544a9b06040b01e5fb8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9101,38 +9081,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4531686299702002871, guid: 9c63dab69beaa544a9b06040b01e5fb8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4616824154259579337, guid: 9c63dab69beaa544a9b06040b01e5fb8, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4616824154259579337, guid: 9c63dab69beaa544a9b06040b01e5fb8, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4616824154259579337, guid: 9c63dab69beaa544a9b06040b01e5fb8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4616824154259579337, guid: 9c63dab69beaa544a9b06040b01e5fb8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4944528907794138882, guid: 9c63dab69beaa544a9b06040b01e5fb8, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4944528907794138882, guid: 9c63dab69beaa544a9b06040b01e5fb8, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4944528907794138882, guid: 9c63dab69beaa544a9b06040b01e5fb8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4944528907794138882, guid: 9c63dab69beaa544a9b06040b01e5fb8, type: 3}
-      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -9334,7 +9282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5533888038741951124, guid: 0f32ea55c4019fc48883ac35531f7444, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5533888038741951124, guid: 0f32ea55c4019fc48883ac35531f7444, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19156,7 +19104,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5533888038741951124, guid: 0f32ea55c4019fc48883ac35531f7444, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5533888038741951124, guid: 0f32ea55c4019fc48883ac35531f7444, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23448,7 +23396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5533888038741951124, guid: 0f32ea55c4019fc48883ac35531f7444, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5533888038741951124, guid: 0f32ea55c4019fc48883ac35531f7444, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28937,7 +28885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5533888038741951124, guid: 0f32ea55c4019fc48883ac35531f7444, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5533888038741951124, guid: 0f32ea55c4019fc48883ac35531f7444, type: 3}
       propertyPath: m_LocalPosition.x
@@ -39410,7 +39358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5533888038741951124, guid: 0f32ea55c4019fc48883ac35531f7444, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5533888038741951124, guid: 0f32ea55c4019fc48883ac35531f7444, type: 3}
       propertyPath: m_LocalPosition.x
@@ -44967,7 +44915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5533888038741951124, guid: 0f32ea55c4019fc48883ac35531f7444, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5533888038741951124, guid: 0f32ea55c4019fc48883ac35531f7444, type: 3}
       propertyPath: m_LocalPosition.x
