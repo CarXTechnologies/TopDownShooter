@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 02aaccbb9d71050448fbd8dd0cfbd11a
+guid: a0ddcc425da01a446a14555ccad30654
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -33,11 +33,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Attack
+      name: Run
       takeName: CINEMA_4D_Main
       internalID: -1498010087492872569
-      firstFrame: 50
-      lastFrame: 150
+      firstFrame: 0
+      lastFrame: 20
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -61,7 +61,7 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1

@@ -21,6 +21,7 @@ namespace TopDownShooter
 		private AttackManager m_attackManager;
 		private ManaComponent m_mana;
 		private HealthComponent m_health;
+		private SearcherTarget m_searcherTarget;
 
 		private InputAction m_moveAction;
 		private InputAction m_attackAction;
@@ -50,6 +51,7 @@ namespace TopDownShooter
 			m_attackManager = character.GetComponent<AttackManager>();
 			m_mana = character.GetComponent<ManaComponent>();
 			m_health = character.GetComponent<HealthComponent>();
+			m_searcherTarget = character.GetComponent<SearcherTarget>();
 			
 			m_health.onDead += onPlayerDead.Invoke;
 		}
@@ -69,19 +71,24 @@ namespace TopDownShooter
 				var move = m_moveAction.ReadValue<Vector2>();
 				Vector3 offset = new(move.x, 0f, move.y);
 				m_characterMoving.Move(offset);
+				var target = m_searcherTarget.Serach();
 
-				if (move.x != 0f || move.y != 0f)
+				if (target)
+				{
+					var dir = target.position - m_characterMoving.transform.position; 
+					m_characterMoving.Look(dir);
+				}
+				else if (move.x != 0f || move.y != 0f)
 				{
 					m_characterMoving.Look(offset);
 				}
-
 
 				bool canAttack = m_mana.current >= m_attackManager.needMana && m_attackManager.canAttack;
 				if (canAttack)
 				{
 					if (m_attackAction.WasPressedThisFrame())
 					{
-						m_attackManager.Attack(null);
+						m_attackManager.Attack(target);
 
 						m_mana.Reduce(m_attackManager.needMana);
 					}

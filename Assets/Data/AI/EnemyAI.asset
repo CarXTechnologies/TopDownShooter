@@ -42,8 +42,8 @@ MonoBehaviour:
   blackboard:
     target: {fileID: 0}
     moveToPosition: {x: 100, y: 0, z: 0}
-  viewPosition: {x: 310.4, y: 65.6, z: 0}
-  viewScale: {x: 0.57175326, y: 0.57175326, z: 1}
+  viewPosition: {x: 265, y: 52, z: 0}
+  viewScale: {x: 1, y: 1, z: 1}
   references:
     version: 2
     RefIds:
@@ -157,10 +157,6 @@ MonoBehaviour:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
-        mask:
-          serializedVersion: 2
-          m_Bits: 64
-        radius: 7
     - rid: 5614451881988063235
       type: {class: ChasingTarget, ns: TopDownShooter.AI, asm: Assembly-CSharp}
       data:

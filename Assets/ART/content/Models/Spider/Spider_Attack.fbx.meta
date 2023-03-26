@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 02aaccbb9d71050448fbd8dd0cfbd11a
+guid: 00d9cd30ec5f90442910426e4ccda906
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -36,15 +36,15 @@ ModelImporter:
       name: Attack
       takeName: CINEMA_4D_Main
       internalID: -1498010087492872569
-      firstFrame: 50
-      lastFrame: 150
+      firstFrame: 0
+      lastFrame: 80
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -61,7 +61,7 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1

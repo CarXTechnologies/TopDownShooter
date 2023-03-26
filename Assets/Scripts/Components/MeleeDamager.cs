@@ -1,26 +1,40 @@
-using DG.Tweening;
+using System;
+using System.Collections;
 using UnityEngine;
 
 namespace TopDownShooter
 {
 	public class MeleeDamager : MonoBehaviour, IDamagerComponent
 	{
-		private void OnDestroy()
-		{
-			transform.DOKill();
-		}
+		[SerializeField] private ParticleSystem m_particleSystem;
 
+		private void Start()
+		{
+			m_particleSystem.Stop();
+		}
 
 		public void Attack(Transform target, float damage, float delay)
 		{
-			transform.DOKill(true);
-			transform.DOLocalRotate(new Vector3(0, -50, 0), 0.2f).SetLoops(2, LoopType.Yoyo).OnComplete(() =>
+			if (target.TryGetComponent(out HealthComponent hp))
 			{
-				if (target.TryGetComponent(out HealthComponent hp))
-				{
-					hp.TakeDamage(damage);
-				}
-			});
+				StartCoroutine(Damage(hp, damage, delay));
+			}
+		}
+
+		private IEnumerator Damage(HealthComponent hp, float damage, float delay)
+		{
+			m_particleSystem.Play();
+			
+			yield return new WaitForSeconds(delay);
+			
+			if (hp)
+			{
+				hp.TakeDamage(damage);
+			}
+			
+			yield return new WaitForSeconds(0.5f);
+			
+			m_particleSystem.Stop();
 		}
 	}
 }

@@ -1,13 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TheKiwiCoder;
+using UnityEngine.AI;
 
 [System.Serializable]
 public class RandomPosition : ActionNode
 {
-	public Vector2 min = Vector2.one * -10;
-	public Vector2 max = Vector2.one * 10;
+	public float range = 10;
 
 	protected override void OnStart()
 	{
@@ -16,13 +14,30 @@ public class RandomPosition : ActionNode
 	protected override void OnStop()
 	{
 	}
+	
+	private bool RandomPoint(Vector3 center, float range, out Vector3 result)
+	{
+		for (int i = 0; i < 30; i++)
+		{
+			Vector3 randomPoint = center + Random.insideUnitSphere * range;
+			NavMeshHit hit;
+			if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas))
+			{
+				result = hit.position;
+				return true;
+			}
+		}
+		result = Vector3.zero;
+		return false;
+	}
 
 	protected override State OnUpdate()
 	{
-		Vector3 pos = new Vector3();
-		pos.x = Random.Range(min.x, max.x);
-		pos.z = Random.Range(min.y, max.y);
-		blackboard.moveToPosition = pos;
-		return State.Success;
+		if (RandomPoint(context.transform.position, range, out var moveToPosition))
+		{
+			blackboard.moveToPosition = moveToPosition;
+			return State.Success;
+		}
+		return State.Failure;
 	}
 }
