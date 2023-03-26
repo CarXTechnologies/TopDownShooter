@@ -21,7 +21,7 @@ namespace TopDownShooter
 			m_maxLevel = maxLevel;
 		}
 
-		public void Refresh(int level, int cost)
+		public void Refresh(int level, int cost, CharacterData.Stats stats)
 		{
 			if (level >= m_maxLevel)
 			{
@@ -31,6 +31,8 @@ namespace TopDownShooter
 			{
 				levelText.text = $"Level {level}";
 			}
+			
+			levelText.text += $"\nHP: {stats.health}\nMaha: {stats.mana}";
 			
 			costText.text = cost.ToString();
 			costText.gameObject.SetActive(level < m_maxLevel);

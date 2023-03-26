@@ -84,7 +84,8 @@ namespace TopDownShooter.States
 				var data = m_upgradeData.GetPlayerUpgrade(level);
 				cost = data.cost;
 			}
-			m_uiPlayerUpgrade.Refresh(level, cost);
+			CharacterData.Stats stats = m_upgradeData.GetPlayerUpgrade(m_playerProfile.playerLevel).stats;
+			m_uiPlayerUpgrade.Refresh(level, cost, stats);
 		}
 
 		private void RefreshSkillUI(int skillIndex)
@@ -99,7 +100,8 @@ namespace TopDownShooter.States
 				cost = data.cost;
 			}
 
-			m_uiSkillsUpgrade[skillIndex].Refresh(skillLevel, cost);
+			SkillData.Stats stats = skillUpgrade.levels[skillLevel - 1].stats;
+			m_uiSkillsUpgrade[skillIndex].Refresh(skillLevel, cost, stats);
 		}
 	}
 }
