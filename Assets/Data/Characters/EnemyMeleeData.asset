@@ -16,7 +16,7 @@ MonoBehaviour:
     health: 100
     mana: 50
     speedRestoreMana: 10
-    speedMove: 3
+    speedMove: 4.5
     baseDamage: 0
   skills:
   - {fileID: 11400000, guid: 7d3874d76764b9f418ae45b2b457d845, type: 2}
