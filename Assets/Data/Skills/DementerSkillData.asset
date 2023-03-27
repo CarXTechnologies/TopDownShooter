@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: DementerSkillData
   m_EditorClassIdentifier: 
   prefab: {fileID: -5111387480850904775, guid: 4cda85816f134e845bba6388fc311ca1, type: 3}
+  icon: {fileID: 0}
   stats:
     mana: 0
     attackDistance: 2
-    cooldownTime: 1
-    damage: 10
+    cooldownTime: 0.1
+    damage: 2
     flightDistance: 0
     flightSpeed: 0

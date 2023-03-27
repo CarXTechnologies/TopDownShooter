@@ -18,6 +18,6 @@ MonoBehaviour:
     mana: 0
     attackDistance: 7
     cooldownTime: 1.5
-    damage: 10
-    flightDistance: 20
+    damage: 20
+    flightDistance: 30
     flightSpeed: 15
