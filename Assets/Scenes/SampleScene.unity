@@ -190,9 +190,6 @@ MonoBehaviour:
   m_layerMask:
     serializedVersion: 2
     m_Bits: 0
-  m_testMask:
-    serializedVersion: 2
-    m_Bits: 2147483647
 --- !u!114 &92679695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1446,9 +1443,6 @@ MonoBehaviour:
   m_layerMask:
     serializedVersion: 2
     m_Bits: 0
-  m_testMask:
-    serializedVersion: 2
-    m_Bits: 2147483647
 --- !u!65 &333963536
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6147,9 +6141,6 @@ MonoBehaviour:
   m_layerMask:
     serializedVersion: 2
     m_Bits: 0
-  m_testMask:
-    serializedVersion: 2
-    m_Bits: 2147483647
 --- !u!65 &1137710534
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22426,9 +22417,6 @@ MonoBehaviour:
   m_layerMask:
     serializedVersion: 2
     m_Bits: 0
-  m_testMask:
-    serializedVersion: 2
-    m_Bits: 2147483647
 --- !u!65 &1955728008
 BoxCollider:
   m_ObjectHideFlags: 0
