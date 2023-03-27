@@ -3154,7 +3154,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26336
+  m_Name: pb_Mesh31880
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6190,6 +6190,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 474834297}
     m_Modifications:
+    - target: {fileID: 3618242234419025234, guid: 251c6dc854cca2447857bb466768269d, type: 3}
+      propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1815391545}
+    - target: {fileID: 3618242234419025234, guid: 251c6dc854cca2447857bb466768269d, type: 3}
+      propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GotoLevelComplete
+      objectReference: {fileID: 0}
     - target: {fileID: 3618242234419025235, guid: 251c6dc854cca2447857bb466768269d, type: 3}
       propertyPath: m_RootOrder
       value: 6

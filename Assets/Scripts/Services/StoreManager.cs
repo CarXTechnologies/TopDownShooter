@@ -83,7 +83,7 @@ namespace TopDownShooter
 			//We return Complete, informing IAP that the processing on our side is done and the transaction can be closed.
 			return PurchaseProcessingResult.Complete;
 		}
-		
+
 		private bool IsPurchaseValid(Product product)
 		{
 			//If we the validator doesn't support the current store, we assume the purchase is valid
@@ -105,7 +105,7 @@ namespace TopDownShooter
 
 			return true;
 		}
-		
+
 		private static void LogReceipts(IEnumerable<IPurchaseReceipt> receipts)
 		{
 			Debug.Log("Receipt is valid. Contents:");
@@ -114,7 +114,7 @@ namespace TopDownShooter
 				LogReceipt(receipt);
 			}
 		}
-		
+
 		private static void LogReceipt(IPurchaseReceipt receipt)
 		{
 			Debug.Log($"Product ID: {receipt.productID}\n" +
@@ -141,8 +141,8 @@ namespace TopDownShooter
 			if (IsCurrentStoreSupportedByValidator())
 			{
 #if !UNITY_EDITOR
-				var appleTangleData = m_UseAppleStoreKitTestCertificate ? AppleStoreKitTestTangle.Data() : AppleTangle.Data();
-                m_Validator = new CrossPlatformValidator(GooglePlayTangle.Data(), appleTangleData, Application.identifier);
+				// var appleTangleData = m_UseAppleStoreKitTestCertificate ? AppleStoreKitTestTangle.Data() : AppleTangle.Data();
+				// m_Validator = new CrossPlatformValidator(GooglePlayTangle.Data(), appleTangleData, Application.identifier);
 #endif
 			}
 			else
@@ -156,6 +156,7 @@ namespace TopDownShooter
 
 		public static bool IsCurrentStoreSupportedByValidator()
 		{
+			return false;
 			//The CrossPlatform validator only supports the GooglePlayStore and Apple's App Stores.
 			return IsGooglePlayStoreSelected() || IsAppleAppStoreSelected();
 		}
@@ -172,7 +173,7 @@ namespace TopDownShooter
 			return currentAppStore == AppStore.AppleAppStore ||
 			       currentAppStore == AppStore.MacAppStore;
 		}
-		
+
 		private void PurchaseFail(Product product)
 		{
 			var request = m_requests.Find(x => x.productID == product.definition.id);
@@ -192,7 +193,7 @@ namespace TopDownShooter
 				m_requests.Remove(request);
 			}
 		}
-		
+
 		public Product GetProduct(string productID)
 		{
 			if (isInitialized && !string.IsNullOrEmpty(productID))

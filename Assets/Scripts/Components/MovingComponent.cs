@@ -6,8 +6,8 @@ namespace TopDownShooter
 {
 	public abstract class MovingComponent : MonoBehaviour
 	{
-		public abstract float speed { get; }
-		public abstract float velocity { get; }
+		public abstract float maxSpeed { get; }
+		public abstract Vector3 velocity { get; }
 
 		public abstract void Init(float speed);
 

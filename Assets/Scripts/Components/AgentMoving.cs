@@ -24,8 +24,8 @@ namespace TopDownShooter
 			m_agent.SetDestination(position);
 		}
 
-		public override float speed => m_agent.speed;
-		public override float velocity => m_agent.velocity.magnitude;
+		public override float maxSpeed => m_agent.speed;
+		public override Vector3 velocity => m_agent.velocity;
 
 		public override void Init(float speed)
 		{

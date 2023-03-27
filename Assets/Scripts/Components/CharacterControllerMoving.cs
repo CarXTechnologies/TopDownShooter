@@ -24,8 +24,8 @@ namespace TopDownShooter
 			throw new System.NotImplementedException();
 		}
 
-		public override float speed => m_speed;
-		public override float velocity => m_characterController.velocity.magnitude;
+		public override float maxSpeed => m_speed;
+		public override Vector3 velocity => m_characterController.velocity;
 
 		public override void Init(float speed)
 		{
