@@ -7,11 +7,13 @@ namespace TopDownShooter
 {
 	public class AutoBuildNavMesh : MonoBehaviour
 	{
-		[SerializeField] private NavMeshSurface m_surface;
-
 		private void Awake()
 		{
-			m_surface.BuildNavMesh();
+			var surfaces = GetComponents<NavMeshSurface>();
+			foreach (var surface in surfaces)
+			{
+				surface.BuildNavMesh();
+			}
 		}
 	}
 }

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 064419d39072aab42a2499efb077dd21, type: 3}
-  m_Name: EnemySkilMeleelData
+  m_Name: DementerSkillData
   m_EditorClassIdentifier: 
   prefab: {fileID: -5111387480850904775, guid: 4cda85816f134e845bba6388fc311ca1, type: 3}
   stats:

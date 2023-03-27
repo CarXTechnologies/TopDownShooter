@@ -24,7 +24,7 @@ namespace TopDownShooter
 		{
 			fillImage.fillAmount = health.percent;
 
-			bar.SetActive(health.percent < 1f);
+			bar.SetActive(health.percent < 1f && health.percent > 0f);
 
 			var cameraPosition = m_cameraTransform.position;
 			cameraPosition.x = transform.position.x;

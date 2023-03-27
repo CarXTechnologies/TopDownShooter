@@ -10,16 +10,20 @@ public class MoveToPosition : ActionNode
 
 	protected override void OnStart()
 	{
+		context.agent.isStopped = false;
 		context.agent.stoppingDistance = stoppingDistance;
 		context.agent.destination = blackboard.moveToPosition;
 	}
 
 	protected override void OnStop()
 	{
+		context.agent.isStopped = true;
 	}
 
 	protected override State OnUpdate()
 	{
+		context.agent.isStopped = false;
+		
 		if (context.agent.pathPending)
 		{
 			return State.Running;
