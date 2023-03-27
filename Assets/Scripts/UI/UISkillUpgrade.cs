@@ -36,7 +36,7 @@ namespace TopDownShooter
 				levelText.text = $"Level {level}";
 			}
 
-			levelText.text += $"\nDamage: {stats.damage}\nMaha: {stats.mana}";
+			levelText.text += $"\nDamage: {stats.damage}\nMana: {stats.mana}";
 			
 			costText.text = cost.ToString();
 			costText.gameObject.SetActive(level < m_maxLevel);
