@@ -65,15 +65,15 @@ Material:
     m_Floats:
     - _Amplitude: 1
     - _Depthpower: 1
-    - _Emission: 2
+    - _Emission: 0
     - _Frequency: 10
     - _Opacity: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _StartFrequency: 2
+    - _StartFrequency: 0
     - _Useblack: 0
     - _Usedepth: 0
     - __dirty: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
