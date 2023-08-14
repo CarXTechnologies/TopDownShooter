@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: blue_attack
       objectReference: {fileID: 0}
+    - target: {fileID: 6458207762569391382, guid: df079d81493534a4eafc2bada19ca19c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df079d81493534a4eafc2bada19ca19c, type: 3}
 --- !u!4 &6645250759641319682 stripped
