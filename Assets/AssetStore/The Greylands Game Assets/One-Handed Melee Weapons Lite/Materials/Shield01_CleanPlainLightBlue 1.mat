@@ -23,6 +23,7 @@ Material:
   m_Name: Shield01_CleanPlainLightBlue 1
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_ValidKeywords:
+  - _ENVIRONMENTREFLECTIONS_OFF
   - _NORMALMAP
   - _OCCLUSIONMAP
   m_InvalidKeywords:
@@ -62,7 +63,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: c49f9e12acdf7d54ca128c207d271e4b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
