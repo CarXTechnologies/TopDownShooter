@@ -10,11 +10,18 @@ namespace KartGame.KartSystems {
         public InputActionReference AccelerateButton;
         public InputActionReference BrakeButton;
 
-        private void Awake()
+        private void OnEnable()
         {
             TurnInput.action.Enable();
             AccelerateButton.action.Enable();
             BrakeButton.action.Enable();
+        }
+
+        private void OnDisable()
+        {
+            TurnInput.action.Disable();
+            AccelerateButton.action.Disable();
+            BrakeButton.action.Disable();
         }
 
         public override InputData GenerateInput() {
