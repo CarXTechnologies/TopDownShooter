@@ -28,7 +28,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 558a8e2b6826cf840aae193990ba9f2e, type: 3}
   m_Name: ShadowsMidtonesHighlights
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   shadows:
     m_OverrideState: 1
     m_Value: {x: 1, y: 1, z: 1, w: 0.13228367}
@@ -68,7 +68,6 @@ MonoBehaviour:
   - {fileID: -6735002905137304030}
   - {fileID: -3424804324536156708}
   - {fileID: 4286541299907887490}
-  - {fileID: 7744787560915790738}
 --- !u!114 &1654110343704392502
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -84,10 +83,10 @@ MonoBehaviour:
   active: 1
   postExposure:
     m_OverrideState: 1
-    m_Value: -1.5
+    m_Value: -1.92
   contrast:
     m_OverrideState: 1
-    m_Value: 5
+    m_Value: 9.64
   colorFilter:
     m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -111,14 +110,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   threshold:
-    m_OverrideState: 1
-    m_Value: 1.4
+    m_OverrideState: 0
+    m_Value: 11.22
   intensity:
-    m_OverrideState: 1
-    m_Value: 1.08
+    m_OverrideState: 0
+    m_Value: 0
   scatter:
     m_OverrideState: 1
-    m_Value: 0.386
+    m_Value: 0.476
   clamp:
     m_OverrideState: 0
     m_Value: 65472
@@ -129,7 +128,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   skipIterations:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   dirtTexture:
     m_OverrideState: 1
@@ -137,7 +136,7 @@ MonoBehaviour:
     dimension: 1
   dirtIntensity:
     m_OverrideState: 1
-    m_Value: 11.12
+    m_Value: 0.67
 --- !u!114 &4286541299907887490
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -160,28 +159,3 @@ MonoBehaviour:
   balance:
     m_OverrideState: 1
     m_Value: 90
---- !u!114 &7744787560915790738
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29fa0085f50d5e54f8144f766051a691, type: 3}
-  m_Name: FilmGrain
-  m_EditorClassIdentifier: 
-  active: 0
-  type:
-    m_OverrideState: 1
-    m_Value: 9
-  intensity:
-    m_OverrideState: 1
-    m_Value: 0.651
-  response:
-    m_OverrideState: 1
-    m_Value: 0.189
-  texture:
-    m_OverrideState: 0
-    m_Value: {fileID: 0}

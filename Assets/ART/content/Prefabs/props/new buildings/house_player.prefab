@@ -173,7 +173,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: c177ae66d0b2c14418da8422810579fd, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 830e2425f90e9074f94465dd063aff91, type: 2}
+      objectReference: {fileID: 2100000, guid: ce70f14cabc35124fb088723d47b0668, type: 2}
     - target: {fileID: 919132149155446097, guid: c177ae66d0b2c14418da8422810579fd, type: 3}
       propertyPath: m_Name
       value: decal_house
