@@ -10,7 +10,7 @@ namespace KartGame.KartSystems
 		[SerializeField] private CinemachineVirtualCamera m_vc;
 		[SerializeField] private ArcadeKart m_car;
 
-		public Transform detachPoint => m_car ? m_car.point : null;
+		public bool isActive => m_car != null;
 
 		private void Awake()
 		{
@@ -27,6 +27,7 @@ namespace KartGame.KartSystems
 
 		public void Attach(ArcadeKart car)
 		{
+			gameObject.SetActive(true);
 			m_car = car; 
 			m_car.enabled = true;
 			var carTransform = m_car.transform;
@@ -37,6 +38,7 @@ namespace KartGame.KartSystems
 
 		public void Detach()
 		{
+			gameObject.SetActive(false);
 			m_vc.enabled = false;
 			if (m_car)
 			{

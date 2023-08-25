@@ -7,9 +7,6 @@ namespace KartGame.KartSystems
 {
     public class ArcadeKart : MonoBehaviour
     {
-        public Transform point;
-        
-
         [System.Serializable]
         public struct Stats
         {
