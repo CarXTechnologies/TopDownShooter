@@ -5,6 +5,7 @@ namespace TopDownShooter
     public class play_sound : MonoBehaviour
     {
         public AudioSource audioSource;
+        public AudioSource townSound;
         public float volume;
         
         void OnTriggerEnter(Collider other)
@@ -12,6 +13,7 @@ namespace TopDownShooter
             if (other.tag == "Player" && !audioSource.isPlaying)
             {
                 audioSource.Play();
+                townSound.Pause();
             }
         }
 
@@ -20,6 +22,7 @@ namespace TopDownShooter
             if (other.tag == "Player" && audioSource.isPlaying)
             {
                 audioSource.Pause();
+                townSound.Play();
             }
         }
 
