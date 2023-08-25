@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5896501226336569538}
   m_Layer: 0
   m_Name: Trigger
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,7 +188,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b2e8893a3093437d9d101b53db56941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  point: {fileID: 7994997730946136850}
   baseStats:
     Acceleration: 1000
     Braking: 1000
