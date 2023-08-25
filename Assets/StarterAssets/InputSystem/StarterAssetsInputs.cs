@@ -21,39 +21,41 @@ namespace StarterAssets
 		public bool cursorLocked = true;
 		public bool cursorInputForLook = true;
 
+		public InputActionAsset inputAsset;
+
+		private InputAction m_moveAction;
+		private InputAction m_lookAction;
+		private InputAction m_jumpAction;
+		private InputAction m_sprintAction;
+
+		private void Awake()
+		{
+			m_moveAction = inputAsset.FindAction("Move");
+			m_lookAction = inputAsset.FindAction("Look");
+			m_jumpAction = inputAsset.FindAction("Jump");
+			m_sprintAction = inputAsset.FindAction("Sprint");
+		}
+
 		private void OnEnable()
 		{
 			move = Vector2.zero;
 			look = Vector2.zero;
 			jump = false;
 			sprint = false;
+			m_moveAction.Enable();
+			m_lookAction.Enable();
+			m_jumpAction.Enable();
+			m_sprintAction.Enable();
 		}
 
-#if ENABLE_INPUT_SYSTEM
-		public void OnMove(InputValue value)
+		private void Update()
 		{
-			MoveInput(value.Get<Vector2>());
+			move = m_moveAction.ReadValue<Vector2>();
+			look = m_lookAction.ReadValue<Vector2>();
+			jump = m_jumpAction.WasPerformedThisFrame();
+			sprint = m_sprintAction.IsPressed();
+			
 		}
-
-		public void OnLook(InputValue value)
-		{
-			if(cursorInputForLook)
-			{
-				LookInput(value.Get<Vector2>());
-			}
-		}
-
-		public void OnJump(InputValue value)
-		{
-			JumpInput(value.isPressed);
-		}
-
-		public void OnSprint(InputValue value)
-		{
-			SprintInput(value.isPressed);
-		}
-#endif
-
 
 		public void MoveInput(Vector2 newMoveDirection)
 		{

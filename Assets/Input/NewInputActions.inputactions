@@ -67,6 +67,17 @@
                 },
                 {
                     "name": "",
+                    "id": "47bed014-92c6-4ead-a93d-d98075ed49eb",
+                    "path": "<Gamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Accelerate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "4699f918-b15d-44f0-b98c-bb69138655d7",
                     "path": "<Keyboard>/s",
                     "interactions": "",
@@ -80,6 +91,17 @@
                     "name": "",
                     "id": "480bc4a3-066c-4e34-8400-c9d0fca7dd02",
                     "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Brake",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d24fbbdd-6bc3-42e2-ba30-6bf25212bcd3",
+                    "path": "<Gamepad>/leftStick/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -152,6 +174,17 @@
                     "action": "TurnInput",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "265d2009-b781-4299-9fe5-3621885a8c98",
+                    "path": "<Gamepad>/leftStick/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TurnInput",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 },
                 {
                     "name": "",
