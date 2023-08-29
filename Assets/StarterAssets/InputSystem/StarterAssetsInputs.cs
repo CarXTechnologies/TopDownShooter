@@ -54,7 +54,6 @@ namespace StarterAssets
 			look = m_lookAction.ReadValue<Vector2>();
 			jump = m_jumpAction.WasPerformedThisFrame();
 			sprint = m_sprintAction.IsPressed();
-			
 		}
 
 		public void MoveInput(Vector2 newMoveDirection)
