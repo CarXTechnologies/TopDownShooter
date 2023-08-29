@@ -767,7 +767,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1407806550736918862, guid: 6eb08bfc0fd869c47b796c42ada099da, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -159.5
+      value: -238.9
       objectReference: {fileID: 0}
     - target: {fileID: 1407806550736918862, guid: 6eb08bfc0fd869c47b796c42ada099da, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -819,25 +819,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d677f1681015749b15c436eec6d880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MovementRange: 50
+  m_MovementRange: 100
   m_DynamicOriginRange: 100
   m_ControlPath: <Gamepad>/rightStick
-  m_Behaviour: 0
+  m_Behaviour: 1
   m_UseIsolatedInputActions: 0
   m_PointerDownAction:
-    m_Name: 
+    m_Name: Pointer Down
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: ffbb11ff-60a3-4487-9d2c-6022d859d0ad
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
   m_PointerMoveAction:
-    m_Name: 
+    m_Name: Pointer Move
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: 9fa0daf1-63af-41cc-98b8-8a9fd0c59eb9
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []

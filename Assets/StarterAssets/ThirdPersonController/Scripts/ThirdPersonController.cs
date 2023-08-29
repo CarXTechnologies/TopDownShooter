@@ -167,13 +167,14 @@ namespace StarterAssets
             }
         }
 
+        public float speedRotation = 200f;
         private void CameraRotation()
         {
             // if there is an input and camera position is not fixed
             if (_input.look.sqrMagnitude >= _threshold && !LockCameraPosition)
             {
                 //Don't multiply mouse input by Time.deltaTime;
-                float deltaTimeMultiplier = 1f;
+                float deltaTimeMultiplier = speedRotation * Time.deltaTime;
 
                 _cinemachineTargetYaw += _input.look.x * deltaTimeMultiplier;
                 _cinemachineTargetPitch += _input.look.y * deltaTimeMultiplier;
